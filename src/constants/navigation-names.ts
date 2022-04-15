@@ -9,4 +9,5 @@ export enum NavigationNames {
   Demo = "Demo",
   Counter = "Counter",
   Color = "Color",
+  Square = "Square",
 }

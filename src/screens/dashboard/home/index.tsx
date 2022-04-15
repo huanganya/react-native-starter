@@ -25,6 +25,11 @@ const Home: React.FC = () => {
       />
       <Button title={"Demo"} onPress={() => navigate(NavigationNames.Demo)} />
       <Button
+        title={"Square"}
+        onPress={() => navigate(NavigationNames.Square)}
+      />
+
+      <Button
         title={"Counter"}
         onPress={() => navigate(NavigationNames.Counter)}
       />

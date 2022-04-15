@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import BottomTabStack from "./BottomTabStack";
 import DemoScreen from "../screens/dashboard/demo";
+import SquareScreen from "../screens/dashboard/square";
 import ColorScreen from "../screens/dashboard/color";
 import CounterScreen from "../screens/dashboard/counter";
 import InfoScreen from "../screens/dashboard/info";
@@ -70,6 +71,13 @@ export const AppStack = (): ReactElement => {
           component={CounterScreen}
           options={{
             title: "Counter",
+          }}
+        />
+        <Stack.Screen
+          name={NavigationNames.Square}
+          component={SquareScreen}
+          options={{
+            title: "Square",
           }}
         />
       </Stack.Navigator>
