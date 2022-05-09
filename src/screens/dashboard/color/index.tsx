@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Button, FlatList, Text, View } from "react-native";
 
 const Color: React.FC = () => {
-  const [colors, setColors] = useState<{ name: string; color: string }[]>([
-    { name: "red", color: "red" },
-  ]);
+  const [colors, setColors] = useState<
+    { name: string; color: string; size: number }[]
+  >([{ name: "red", color: "red", size: 100 }]);
 
   return (
     <View>
@@ -22,7 +22,11 @@ const Color: React.FC = () => {
           return (
             <View style={{ padding: 10 }}>
               <View
-                style={{ height: 100, width: 100, backgroundColor: item.color }}
+                style={{
+                  height: item.size,
+                  width: item.size,
+                  backgroundColor: item.color,
+                }}
               />
               <Text>{item.name}</Text>
             </View>
@@ -40,6 +44,7 @@ const randomRgb = () => {
   return {
     name: `red${red}, green:${green}, blue:${blue}`,
     color: `rgb(${red}, ${green}, ${blue})`,
+    size: Math.floor(Math.random() * 100),
   };
 };
 

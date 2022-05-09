@@ -2,6 +2,7 @@ import React, { ReactElement } from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import BottomTabStack from "./BottomTabStack";
+import SearchScreen from "../screens/dashboard/search";
 import DemoScreen from "../screens/dashboard/demo";
 import SquareScreen from "../screens/dashboard/square";
 import ColorScreen from "../screens/dashboard/color";
@@ -57,6 +58,13 @@ export const AppStack = (): ReactElement => {
           component={DemoScreen}
           options={{
             title: "Demo",
+          }}
+        />
+        <Stack.Screen
+          name={NavigationNames.Search}
+          component={SearchScreen}
+          options={{
+            title: "Search",
           }}
         />
         <Stack.Screen

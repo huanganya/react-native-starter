@@ -23,6 +23,11 @@ const Home: React.FC = () => {
         title={buttonTitle}
         onPress={() => navigate(NavigationNames.Detail)}
       />
+      <Button
+        title={"Search"}
+        onPress={() => navigate(NavigationNames.Search)}
+      />
+
       <Button title={"Demo"} onPress={() => navigate(NavigationNames.Demo)} />
       <Button
         title={"Square"}

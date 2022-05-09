@@ -7,6 +7,7 @@ export enum NavigationNames {
   Detail = "Detail",
   Settings = "Settings",
   Demo = "Demo",
+  Search = "Search",
   Counter = "Counter",
   Color = "Color",
   Square = "Square",
