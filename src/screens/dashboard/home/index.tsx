@@ -9,7 +9,6 @@ const Home: React.FC = () => {
   const { state } = useContext(AppContext);
   const { navigate } = useNavigation();
 
-  console.log("at Home page", state.isLoggedIn);
   const buttonTitle = state.isLoggedIn ? "Detail Page" : "Detail Page(Need Login)";
   return (
     <View style={styles.container}>

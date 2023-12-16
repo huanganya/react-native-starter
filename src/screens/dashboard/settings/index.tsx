@@ -8,7 +8,6 @@ import styles from "./styles";
 const Setting: React.FC = () => {
   const { state, appDispatch } = useContext(AppContext);
   useLogin();
-  console.log("at Settings", state.isLoggedIn);
   return (
     <View style={styles.container}>
       <Text>

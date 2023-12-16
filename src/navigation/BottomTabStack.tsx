@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
+import { Route, getFocusedRouteNameFromRoute } from "@react-navigation/native";
 import SettingsScreen from "../screens/dashboard/settings";
 import DetailScreen from "../screens/dashboard/detail";
 import HomeScreen from "../screens/dashboard/home";
@@ -12,20 +12,9 @@ type RootStackParamList = {
   Detail: undefined;
 };
 
-const getHeaderTitle = (route): string => {
-  const routeName = getFocusedRouteNameFromRoute(route);
-
-  return routeName ?? "";
-};
-
 const Tab = createBottomTabNavigator<RootStackParamList>();
 
-const BottomTabStack = ({ navigation, route }): ReactElement => {
-  React.useLayoutEffect(() => {
-    navigation.setOptions({ headerTitle: getHeaderTitle(route)
-    });
-  }, [ navigation, route ]);
-
+const BottomTabStack = (): ReactElement => {
   return (
     <Tab.Navigator initialRouteName={"Home"}
     >

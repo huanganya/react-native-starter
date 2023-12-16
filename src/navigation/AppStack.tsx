@@ -12,6 +12,7 @@ type RootStackParamList = {
   Login: undefined;
   Welcome: undefined;
   Dashboard: undefined;
+  [NavigationNames.Info]: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -41,7 +42,8 @@ export const AppStack = (): ReactElement => {
           name={NavigationNames.Dashboard}
           component={BottomTabStack}
           options={{
-            headerLeft: () => null
+            headerLeft: () => null,
+            header: () => null,
           }}
         />
         <Stack.Screen

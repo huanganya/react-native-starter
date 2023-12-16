@@ -17,7 +17,6 @@ const AppContext = createContext(initialContextState);
 
 const AppProvider: React.FC = ({ children }) => {
   const [ state, dispatch ] = useReducer(reducer, initialState);
-  console.log("state1111", state);
   const asyncDispatch = useCallback(
     async (action: AppActions<any>) => {
       switch (action.type) {
